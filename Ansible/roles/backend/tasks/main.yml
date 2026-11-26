@@ -1,0 +1,39 @@
+
+---
+- name: Create White application directory
+  ansible.builtin.file:
+    path: /opt/white
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Copy Docker Compose file
+  ansible.builtin.copy:
+    src: docker-compose.yml
+    dest: /opt/white/docker-compose.yml
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Copy backend startup script
+  ansible.builtin.copy:
+    src: start-backend.sh
+    dest: /opt/white/start-backend.sh
+    owner: root
+    group: root
+    mode: '0750'
+
+- name: Install White backend systemd service
+  ansible.builtin.copy:
+    src: white-backend.service
+    dest: /etc/systemd/system/white-backend.service
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Enable White backend service
+  ansible.builtin.systemd_service:
+    name: white-backend.service
+    enabled: true
+    daemon_reload: true
