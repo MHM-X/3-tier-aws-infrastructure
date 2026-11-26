@@ -6,7 +6,7 @@
 
 </div>
 
-## 📖 About
+##  About
 
 This project demonstrates the design and implementation of a production-style three-tier infrastructure on **Amazon Web Services (AWS)**.
 
@@ -14,7 +14,7 @@ The goal was to build a scalable, highly available, and automated cloud environm
 
 The project combines multiple DevOps and cloud engineering tools to manage infrastructure in a structured and repeatable way.
 
-## 🏗️ Architecture
+##  Architecture
 
 <div align="center">
 
@@ -24,7 +24,7 @@ The project combines multiple DevOps and cloud engineering tools to manage infra
 
 The infrastructure is deployed across multiple Availability Zones, separating the application and database layers into private networks while exposing the application through a public Application Load Balancer.
 
-## 🧩 Infrastructure Components
+##  Infrastructure Components
 
 ### 01 · Infrastructure as Code
 
@@ -56,7 +56,7 @@ Automating infrastructure workflows and deployment tasks, integrating Terraform,
 
 Monitoring infrastructure performance, collecting logs and metrics, configuring alarms, and providing visibility into the health and behavior of AWS resources.
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=aws,terraform,ansible,docker,github,githubactions" alt="Technology Stack"/>
